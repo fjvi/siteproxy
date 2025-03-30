@@ -1,5 +1,5 @@
-const 域名 = 'test.090227.xyz';
-const 路径 = 'test';
+const 域名 = 'p.692.cloudns.be';
+const 路径 = 'p';
 const workerHandler = {
     async fetch(request, env) {
         const url = new URL(request.url);
