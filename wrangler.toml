@@ -1,4 +1,5 @@
 # for cf pages deployment
+name = "poyy" # 必须要保留项目名，让 Cloudflare 知道你要发布到哪个 Pages 项目
 pages_build_output_dir = "build/cf_page"
 compatibility_date = "2025-07-23"
 compatibility_flags = [ "nodejs_compat" ]
