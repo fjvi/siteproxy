@@ -1,0 +1,7 @@
+# for cf pages deployment
+pages_build_output_dir = "build/cf_page"
+compatibility_date = "2025-07-23"
+compatibility_flags = [ "nodejs_compat" ]
+
+[observability]
+enabled = true
