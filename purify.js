@@ -1,7 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// 定位 GitHub Actions 编译打包后的产物目录
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// 定位仓库中现有的产物目录
 const targetDir = path.join(__dirname, 'build', 'cf_page');
 const workerFile = path.join(targetDir, '_worker.js');
 
@@ -16,7 +20,7 @@ if (fs.existsSync(workerFile)) {
     content = content.replace(/<head>/i, `<head>${injectCSS}`);
     
     fs.writeFileSync(workerFile, content, 'utf8');
-    console.log('✅ 网页端构建成功：已自动抹除警告横幅！');
+    console.log('✅ 网页端构建成功：已在预编译文件中自动抹除警告横幅！');
 } else {
     console.log('⚠️ 未找到编译文件。');
 }
