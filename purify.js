@@ -57,7 +57,7 @@ dirsToPatch.forEach(dir => {
                                 if(div.parentNode) div.parentNode.removeChild(div);
                             }
                         });
-                    }, 10000);
+                    }, 50);
                 }
                 `;
                 content = frontShield + "\n" + content;
